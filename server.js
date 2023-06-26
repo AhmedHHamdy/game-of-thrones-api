@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
 const characters = require('./data')
+const cors = require('cors')
 const PORT = 5000
 
-
+app.use(cors())
 
 // Display index.html on the home page
 app.get('/', (request, response) => {
